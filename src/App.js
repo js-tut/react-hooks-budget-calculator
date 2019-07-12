@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import ExpenseList from "./components/ExpenseList";
 import ExpenseForm from "./components/ExpenseForm";
@@ -9,9 +9,15 @@ const initialExpenses = [
   { id: uuid(), charge: "car payment", amount: 400 },
   { id: uuid(), charge: "credit card bill", amount: 1200 }
 ];
-console.log(initialExpenses);
-
+// import useState()
+// function  returns [] with two values
+// the actual value of the state
+// function for updates/control
+// default value
 function App() {
+  const [expenses, setExpenses] = useState(initialExpenses);
+  console.log(expenses);
+
   return (
     <>
       <Alert />
